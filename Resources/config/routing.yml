@@ -1,0 +1,7 @@
+variants:
+    pattern: /template/variants.html
+    defaults: { _controller: SuluMultivariateTestingBundle:Template:variants }
+
+api_variants:
+    pattern: /variantions
+    defaults: { _controller: SuluMultivariateTestingBundle:Template:variants }

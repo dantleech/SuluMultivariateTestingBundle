@@ -18,7 +18,7 @@ define([], function() {
             changeNothing: true
         },
 
-        templates: ['/admin/sulumultivariatetesting/template/contact/list'],
+        templates: ['/admin/multivariatetesting/template/variants'],
 
         initialize: function() {
             this.load();
@@ -40,16 +40,17 @@ define([], function() {
         },
 
         load: function() {
-            //// get content data
-            //this.sandbox.emit('sulu.content.contents.get-data', function(data) {
-                //this.render(data);
-            //}.bind(this));
-        },
+            this.sandbox.dom.html(this.$el, this.renderTemplate('/admin/multivariatetesting/template/variants'));
 
-        render: function(data) {
-            this.sandbox.dom.html(this.$el, this.renderTemplate('/admin/content/template/content/mv_testing', {
-            }));
-        },
-
+            this.sandbox.start([
+                {
+                    name: 'datagrid@husky',
+                    options: {
+                        url: '/admin/multivariatetesting/variations',
+                        el: '#variant_list',
+                    }
+                }
+            ]);
+        }
     }
 });

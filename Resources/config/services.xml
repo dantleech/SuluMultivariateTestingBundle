@@ -23,6 +23,10 @@
             <tag name="sulu.admin" />
         </service>
 
+        <service id="sulu_multivariate_testing.controller.rest" class="Sulu\Bundle\MultivariateTestingBundle\Controller\RestController">
+            <argument>%sulu_multivariate_testing.view_mapping%</argument>
+        </service>
+
     </services>
 
 </container>
