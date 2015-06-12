@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="sulu_mutlivariate_testing" class="Sulu\Bundle\MultivariateTestingBundle\EventListener\MultivariateTestingListener">
+            <argument>%sulu_multivariate_testing.view_mapping%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" />
+        </service>
+
+        <service id="sulu_multivariate_testing.extension.multivariate" class="MultivariateTestingExtension">
+            <tag name="sulu.structure.extension"/>
+        </service>
+    </services>
+
+</container>
+

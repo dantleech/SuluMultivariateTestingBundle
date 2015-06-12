@@ -1,0 +1,6 @@
+sulu_multivariate_testing:
+    variant_sets:
+        set1:
+            template1.html
+            template2.html
+
