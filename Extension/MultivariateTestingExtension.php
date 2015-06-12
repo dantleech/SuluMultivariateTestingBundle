@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Sulu\Bundle\MultivariateTestingBundle\Structure;
+namespace Sulu\Bundle\MultivariateTestingBundle\Extension;
 
 use PHPCR\NodeInterface;
 use Sulu\Component\Content\StructureExtension\StructureExtension;
@@ -26,9 +26,16 @@ class MultivariateTestingExtension extends StructureExtension
     /**
      * {@inheritdoc}
      */
+    protected $properties = array(
+        'mv_testing_variations',
+    );
+
+    /**
+     * {@inheritdoc}
+     */
     public function save(NodeInterface $node, $data, $webspaceKey, $languageCode)
     {
-        $this->saveProperty($node, $data, 'multivariate_testing_variations');
+        $this->saveProperty($node, $data, 'mv_testing_variations');
     }
 
     /**
@@ -37,7 +44,7 @@ class MultivariateTestingExtension extends StructureExtension
     public function load(NodeInterface $node, $webspaceKey, $languageCode)
     {
         return array(
-            'multivariate_testing_variations' => $this->loadProperty($node, 'multivariate_testing_variations'),
+            'multivariate_testing_variations' => $this->loadProperty($node, 'mv_testing_variations'),
         );
     }
 }

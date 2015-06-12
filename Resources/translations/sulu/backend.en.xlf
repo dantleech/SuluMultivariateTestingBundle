@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="de" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1bf4558371239fbed12n314bo31df806" resname="content-navigation.contents.multivariate_testing">
+                <source>content-navigation.contents.multivariate-testing</source>
+                <target>MV Testing</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
