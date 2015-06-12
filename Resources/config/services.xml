@@ -9,24 +9,6 @@
             <argument>%sulu_multivariate_testing.view_mapping%</argument>
             <tag name="kernel.event_listener" event="kernel.request" />
         </service>
-
-        <service id="sulu_multivariate_testing.extension.multivariate" class="Sulu\Bundle\MultivariateTestingBundle\Extension\MultivariateTestingExtension">
-            <tag name="sulu.structure.extension"/>
-        </service>
-
-        <service id="sulu_multivariate_testing.admin.navigation_provider" class="Sulu\Bundle\MultivariateTestingBundle\Admin\NavigationProvider">
-            <tag name="sulu_admin.content_navigation" alias="content"/>
-        </service>
-
-        <service id="sulu_multivariate_testing.admin" class="Sulu\Bundle\MultivariateTestingBundle\Admin\MultivariateTestingAdmin">
-            <argument>%sulu_admin.name%</argument>
-            <tag name="sulu.admin" />
-        </service>
-
-        <service id="sulu_multivariate_testing.controller.rest" class="Sulu\Bundle\MultivariateTestingBundle\Controller\RestController">
-            <argument>%sulu_multivariate_testing.view_mapping%</argument>
-        </service>
-
     </services>
 
 </container>
